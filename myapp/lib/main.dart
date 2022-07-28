@@ -17,35 +17,53 @@ class Home extends StatelessWidget{
         backgroundColor: Colors.blue[900],
       ),
 
-      //the middle of the page will have a centered picture
-      body:Center(
 
-          child: Image(
-            image: AssetImage('assets/il_fullxfull.515567523_qscj.jpg'),
-          )),
-
-      //Commented out is text that has been modified to be bigger, bolded, in the color brown, with a different font,
-      // and with letter spacing of 2.0
-
-      // child:(Text(
-        //     'I am gay',
-        //     style: TextStyle(
-        //       fontSize: 40.0,
-        //       fontWeight: FontWeight.bold,
-        //       letterSpacing: 2.0,
-        //       color: Colors.brown[700],
-        //       fontFamily: 'Tiro_Kannada',
-
-      //   )),
-      // ),
-
-      //creates a button with no function yet
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Text('slay'),
-        backgroundColor: Colors.amber[100],
+      body:Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[
+          Row(
+            children: <Widget> [
+              Text('I am a row,'),
+              Text('woah'),
+            ],
+          ),
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.yellow,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Two'),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.cyan,
+            child: Text('One'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.green,
+            child: Text('Three'),
+          ),
+        ]
       ),
-    );
+
+
+
+
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Text('slay'),
+          backgroundColor: Colors.amber[100],
+        )
+      );
+
+
+
+
+
+
 
   }
 }
